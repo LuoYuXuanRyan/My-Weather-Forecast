@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+    <title>My Weather Forecast</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+</head>
+
+<body>
+    <script src="./slideshow.js"></script>
+    <div id="title">
+        <h1>Welcome to <span>My Weather Forecast</span>!</h1>
+    </div>
+    <div>
+        <form action="#">
+            <label class="txt">查询城市:</label>
+            <input list="cities" id="searchCity" required="required" value="请输入城市代码" />
+            <datalist id="cities">
+                <option value="101010100">北京</option>
+                <option value="101020100">上海</option>
+                <option value="101030100">天津</option>
+                <option value="101040100">重庆</option>
+                <option value="101050101">哈尔滨</option>
+                <option value="101060101">长春</option>
+                <option value="101070101">沈阳</option>
+                <option value="101080101">呼和浩特</option>
+                <option value="101090101">石家庄</option>
+                <option value="101100101">太原</option>
+                <option value="101110101">西安</option>
+                <option value="101120101">济南</option>
+                <option value="101130101">乌鲁木齐</option>
+                <option value="101140101">拉萨</option>
+                <option value="101150101">西宁</option>
+                <option value="101160101">兰州</option>
+                <option value="101170101">银川</option>
+                <option value="101180101">郑州</option>
+                <option value="101190101">南京</option>
+                <option value="101200101">武汉</option>
+                <option value="101210101">杭州</option>
+                <option value="101220101">合肥</option>
+                <option value="101230101">福州</option>
+                <option value="101240101">南昌</option>
+                <option value="101250101">长沙</option>
+                <option value="101260101">贵阳</option>
+                <option value="101270101">成都</option>
+                <option value="101280101">广州</option>
+                <option value="101290101">昆明</option>
+                <option value="101300101">南宁</option>
+                <option value="101310101">海口</option>
+                <option value="101320101">香港</option>
+                <option value="101330101">澳门</option>
+                <option value="101340101">台北</option>
+            </datalist>
+            <button id="submitButton" onclick="getSubmit()">查询</button>
+            <a href="./codes.xlsx" class="links">查询城市代码</a>
+        </form>
+    </div>
+    <div id="forecastSpace">
+        <div id="overall">
+            <p>更新时间：<span id="updatetime" class="insert"></span></p>
+            <p>预报日期：<span id="date" class="insert"></span></p>
+            <p>最高温度：<span id="tempmax" class="insert"></span>
+                &nbsp&nbsp最低温度：<span id="tempmin" class="insert"></span></p>
+            <p>tips: <span id="tips" class="insert"></span></p>
+        </div>
+        <div id="dayTime">
+            <p>日出时间：<span id="sunrise" class="insert"></span></p>
+            <p>日落时间：<span id="sunset" class="insert"></span></p>
+            <p>日间天气：<span id="weatherday" class="insert"></span></p>
+            <p>日间风向：<span id="winddirday" class="insert"></span></p>
+            <p>日间风力：<span id="windscaleday" class="insert"></span></p>
+        </div>
+        <div id="nightTime">
+            <p>月升时间：<span id="moonrise" class="insert"></span></p>
+            <p>月落时间：<span id="moonset" class="insert"></span></p>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp月相：<span id="moonphase" class="insert"></span></p>
+            <p>夜间天气：<span id="weathernight" class="insert"></span></p>
+            <p>夜间风向：<span id="winddirnight" class="insert"></span></p>
+            <p>夜间风力：<span id="windscalenight" class="insert"></span></p>
+        </div>
+    </div>
+    <div id="pics">
+        <img alt="princess connect re:dive" src="./pictures/1.png" id="show" />
+        <script>setInterval(show, 5000);</script>
+    </div>
+    <div>
+        <button class="buttonList" id="day1" onclick="day1Color()"><span>今日</span></button>
+        <button class="buttonList" id="day2" onclick="day2Color()"><span>明日</span></button>
+        <button class="buttonList" id="day3" onclick="day3Color()"><span>三日后</span></button>
+        <button class="buttonList" id="day4" onclick="day4Color()"><span>四日后</span></button>
+        <button class="buttonList" id="day5" onclick="day5Color()"><span>五日后</span></button>
+        <button class="buttonList" id="day6" onclick="day6Color()"><span>六日后</span></button>
+        <button class="buttonList" id="day7" onclick="day7Color()"><span>七日后</span></button>
+    </div>
+    <audio preload="auto" src="./music/Lost Princess.mp3" autoplay="autoplay" controls="controls" loop="loop"></audio>
+</body>
+<script src="./function.js"></script>
+
+</html>
